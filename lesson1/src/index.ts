@@ -95,19 +95,162 @@
 //   }
 // }
 
-type User = {
-  name: string;
-  age: number;
-  role?: string
-}
+// type User = {
+//   name: string;
+//   age: number;
+//   role?: string
+// }
 
-const user: User = {
-  name: "Bob",
-  age: 12
-};
+// const user: User = {
+//   name: "Bob",
+//   age: 12
+// };
 
-const admin: User ={
-  name: "John",
-  age: 34,
-  role: "Admin"
-}
+// const admin: User ={
+//   name: "John",
+//   age: 34,
+//   role: "Admin"
+// }
+// lessson 2
+
+
+// type StringDictionary = {
+//   [key : string] : string
+// }
+
+
+// type Goods = {
+//   [key : string] : number
+// }
+
+// type Fruits = {
+//   apples: number;
+//   banana: number;
+//   oranges: number;
+// }
+
+// type FrozenGoods = {
+//   iceCream: number;
+//   fish: number;
+//   berry: number;
+// }
+
+// const fruits: Goods = {
+//   apples: 12,
+//   banana: 23,
+//   oranges: 45,
+// };
+
+// const frozenGoods: Goods = {
+//   iceCream: 25,
+//   fish: 30,
+//   berry: 10,
+// }
+
+
+// type Interface = {
+//   [key: string]: string | number
+
+// }
+
+
+// const userInfo: Interface = {
+//   name: 'Bob',
+//   age: 23,
+//   country: 'Ukraine'
+// };
+
+// const bookDetails: Interface = {
+//   title: 'Bible',
+//   page: 350
+// }
+
+
+// function identity<T>(arg: T): T{
+//   return arg
+// }
+
+// let output1 = identity<string>("myString");
+// let outputs2 = identity<number>(100)
+
+
+// function reverse<K>(items: K[]): K[]{
+//   return items.reverse()
+// }
+
+// let numbers = reverse<number>([1, 2, 3, 4, 5])
+// console.log(numbers)
+
+// function lengthOfObject<T extends {length: number}>(obj: T): number{
+//   return obj.length
+// }
+// lengthOfObject({name: 'Earth', length: 5})
+
+
+// const student = {
+//   name: 'john',
+//   age: 25
+// };
+
+// function getProperty<T, K extends keyof T>(obj:T, key: K): T[K]{
+//   return obj[key];
+// }
+
+
+// let studentName = getProperty(student, 'name')
+
+
+// let studentAdress = getProperty(student, 'address')
+
+
+
+// type Todo = {
+//   title: string;
+//   description:  string;
+//   completed: boolean
+// };
+
+// function updateTodod(todo: Todo, fieldToUpdate: Partial<Todo>): Todo{
+//   return {... todo, ...fieldToUpdate}
+// }
+
+// const todo1: Todo = {
+//   title: "Learn TypeScript",
+//   description: "Study the basics of Typescript",
+//   completed: false
+// }
+
+// const todo2 = updateTodod(todo1, {
+//   description: 'Hello'
+// })
+
+
+// type User = {
+//   name: string;
+//   age: number;
+// };
+
+// const john: Readonly<User> = {
+//   name: 'Jonh',
+//   age: 30,
+
+// }
+
+
+
+// type Person = {
+//   name: string;
+//   age: number;
+//   address: string;
+// };
+
+// type PersonSummary = Pick<Person, 'name'| "age">
+
+// const JohnSummary: PersonSummary={
+//   name: 'John',
+//   age: 45,
+// }
+
+
+// lesson 3
+
