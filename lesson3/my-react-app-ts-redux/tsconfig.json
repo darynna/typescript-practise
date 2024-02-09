@@ -21,6 +21,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "../../lesson3/my-react-app-clear-react/src"
+    "src"
   ]
 }

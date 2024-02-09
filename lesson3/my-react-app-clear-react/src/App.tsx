@@ -7,7 +7,7 @@ import { addTodo, deleteTodo } from "./todoSlice";
 import { RootState } from "./store";
 
 function App() {
-  const todos = useSelector((state: RootState) => state.todos);
+  const todos = useSelector((state: RootState) => state.todos)
   const dispatch = useDispatch();
 
   return (
@@ -15,7 +15,7 @@ function App() {
       <h1>Todo List</h1>
       <AddTodoForm onAdd={(text) => dispatch(addTodo(text))} />
       <ul>
-        {todos.map((todo) => (
+        {todos.map((todo: any) => (
           <TodoItem key={todo.id} todo={todo} onDelete={(id) => dispatch(deleteTodo(id))} />
         ))}
       </ul>

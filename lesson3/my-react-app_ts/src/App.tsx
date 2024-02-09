@@ -3,13 +3,13 @@ import TodoItem from "./Components/TodoItem";
 import AddTodoForm from "./Components/AddTodoForm";
 import "./App.css";
 
-interface Todo {
-  id: number;
-  text: string;
+export interface Task {
+  id: number,
+  text: string
 }
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<Task[]>([]);
 
   const addTodo = (text: string) => {
     const newTodo = { id: Date.now(), text };
